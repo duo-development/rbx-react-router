@@ -9,6 +9,7 @@ declare class History {
   constructor(initialEntries?: Array<string>, initialIndex?: number);
 
   onChanged: Signal;
+  location: HistoryEntry;
 
   push(path: string, state?: any): void;
   replace(path: string, state?: any): void;
