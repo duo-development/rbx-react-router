@@ -1,15 +1,8 @@
 local container = script.Parent.Parent
-local Roact = container:FindFirstChild("Roact")
-    or container:FindFirstChild("roact")
-    or container.Parent:FindFirstChild("Roact")
-    or container.Parent:FindFirstChild("roact")
+local Roact = container:FindFirstChild("RoactCompat")
 
 if not Roact then
-    error("Roact Router failed to find Roact. Did you make sure Roact is in the same folder?")
-end
-
-if Roact:IsA("Folder") then
-    Roact = Roact:FindFirstChildOfClass("ModuleScript")
+	error("Roact Router failed to find Roact. Did you make sure Roact is in the same folder?")
 end
 
 return require(Roact)
