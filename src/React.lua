@@ -1,4 +1,4 @@
-local container = script.Parent.Parent
+local container = script.Parent.Parent.Parent
 local React = container:FindFirstChild("React")
 
 if not React then
