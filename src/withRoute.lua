@@ -1,9 +1,9 @@
-local Roact = require(script.Parent.Roact)
+local React = require(script.Parent.React)
 
 local RouteContext = require(script.Parent.RouteContext)
 
 local function withRoute(callback)
-	return Roact.createElement(RouteContext.Consumer, {
+	return React.createElement(RouteContext.Consumer, {
 		render = callback,
 	})
 end

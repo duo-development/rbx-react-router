@@ -1,10 +1,9 @@
-import { Hooks } from "./hooks";
-import { PathMatchOptions, PathMatchResults } from "./Path"
+import { PathMatchOptions, PathMatchResults } from "./Path";
 
 export interface RouteMatchOptions extends PathMatchOptions {
-        path: string
+  path: string;
 }
 
-declare function useRouteMatch(hooks: Hooks, options: RouteMatchOptions): PathMatchResults
+declare function useRouteMatch(options: RouteMatchOptions): PathMatchResults;
 
-export default useRouteMatch
+export default useRouteMatch;

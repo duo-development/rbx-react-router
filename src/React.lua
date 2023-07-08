@@ -1,8 +1,8 @@
 local container = script.Parent.Parent
-local Roact = container:FindFirstChild("RoactCompat")
+local React = container:FindFirstChild("React")
 
-if not Roact then
+if not React then
 	error("Roact Router failed to find Roact. Did you make sure Roact is in the same folder?")
 end
 
-return require(Roact)
+return require(React)

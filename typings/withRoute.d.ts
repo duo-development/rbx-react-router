@@ -1,9 +1,9 @@
-import Roact from "@rbxts/roact";
+import React from "@rbxts/react-ts";
 
-import { RouteRendererProps } from "./Route"
+import { RouteRendererProps } from "./Route";
 
 declare function withRoute(
-        callback: (value: RouteRendererProps) => Roact.Element | undefined
-): Roact.Element
+  callback: (value: RouteRendererProps) => React.Element | undefined
+): React.Element;
 
-export = withRoute
+export = withRoute;

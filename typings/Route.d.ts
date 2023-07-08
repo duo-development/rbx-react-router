@@ -1,26 +1,26 @@
-import Roact from "@rbxts/roact"
+import React from "@rbxts/react-ts";
 
-import { PathMatchResults } from "./Path"
-import { History, HistoryEntry } from "./History"
+import { History, HistoryEntry } from "./History";
+import { PathMatchResults } from "./Path";
 
 export interface RouteRendererProps {
-	match: PathMatchResults | undefined
-	location: HistoryEntry
-	history: History
+  match: PathMatchResults | undefined;
+  location: HistoryEntry;
+  history: History;
 }
 
 export interface RouteProps {
-	path: string
-	exact?: boolean
-	alwaysRender?: boolean
+  path: string;
+  exact?: boolean;
+  alwaysRender?: boolean;
 
-	render?: (rendererProps: RouteRendererProps) => Roact.Element | undefined
-	component?: Roact.Component<RouteRendererProps>
+  render?: (rendererProps: RouteRendererProps) => React.Element | undefined;
+  component?: React.Component<RouteRendererProps>;
 }
 
-declare class Route extends Roact.Component {
-	constructor(props: RouteProps)
-	public render(): Roact.Element | undefined
+declare class Route extends React.Component {
+  constructor(props: RouteProps);
+  public render(): React.Element | undefined;
 }
 
-export default Route
+export default Route;

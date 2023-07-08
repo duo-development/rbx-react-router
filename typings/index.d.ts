@@ -1,40 +1,36 @@
-import { RoactContext } from "./hooks"
+import Link from "./Link";
+import Redirect from "./Redirect";
+import Route, { RouteRendererProps } from "./Route";
+import Router from "./Router";
 
-import Router from "./Router"
-import Route, { RouteRendererProps } from "./Route"
-import Redirect from "./Redirect"
-import Link from "./Link"
+import withRoute from "./withRoute";
+import withRouter, { RouterRendererProps } from "./withRouter";
 
-import withRouter, { RouterRendererProps } from "./withRouter"
-import withRoute from "./withRoute"
+import useHistory from "./useHistory";
+import useLocation from "./useLocation";
+import useParams from "./useParams";
+import useRouteMatch from "./useRouteMatch";
 
-import useHistory from "./useHistory"
-import useLocation from "./useLocation"
-import useParams from "./useParams"
-import useRouteMatch from "./useRouteMatch"
+import { Context } from "@rbxts/react-ts";
+import { History } from "./History";
+import { Path } from "./Path";
 
-import { Path } from "./Path"
-import { History } from "./History"
-
-declare const RouteContext: RoactContext<RouteRendererProps>
-declare const RouterContext: RoactContext<RouterRendererProps>
+declare const RouteContext: Context<RouteRendererProps>;
+declare const RouterContext: Context<RouterRendererProps>;
 
 export {
-	Router,
-	Route,
-	Redirect,
-	Link,
-
-        RouterContext,
-        RouteContext,
-        withRouter,
-        withRoute,
-
-        useHistory,
-        useLocation,
-        useParams,
-        useRouteMatch,
-
-	Path,
-	History
-}
+  History,
+  Link,
+  Path,
+  Redirect,
+  Route,
+  RouteContext,
+  Router,
+  RouterContext,
+  useHistory,
+  useLocation,
+  useParams,
+  useRouteMatch,
+  withRoute,
+  withRouter,
+};

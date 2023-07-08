@@ -1,17 +1,17 @@
-import Roact from "@rbxts/roact"
+import React from "@rbxts/react-ts";
 
-import { History } from "./History"
+import { History } from "./History";
 
 interface RouterProps {
-	history?: History,
+  history?: History;
 
-	initialEntries?: Array<string>
-	initialIndex?: number
+  initialEntries?: Array<string>;
+  initialIndex?: number;
 }
 
-declare class Router extends Roact.Component<RouterProps> {
-	constructor(props: RouterProps)
-	public render(): Roact.Element
+declare class Router extends React.Component<RouterProps> {
+  constructor(props: RouterProps);
+  public render(): React.Element;
 }
 
-export = Router
+export = Router;

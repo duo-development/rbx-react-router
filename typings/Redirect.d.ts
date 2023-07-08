@@ -1,12 +1,12 @@
-import Roact from "@rbxts/roact"
+import React from "@rbxts/react-ts";
 
 interface RedirectProps {
-	path: string
+  path: string;
 }
 
-declare class Redirect extends Roact.Component<RedirectProps> {
-	constructor(props: RedirectProps)
-	public render(): undefined
+declare class Redirect extends React.Component<RedirectProps> {
+  constructor(props: RedirectProps);
+  public render(): undefined;
 }
 
-export = Redirect
+export = Redirect;
